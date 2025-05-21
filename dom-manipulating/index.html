@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+        .highlight {
+          color: white;
+          background-color: black;
+          padding: 10px;
+          width: 250px;
+          text-align: center;
+        }
+      </style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+
+      <script>
+        const link = document.querySelector('a');
+        link.textContent = "Mozila Developer Network";
+        link.href = "ttps://developer.mozilla.org";
+
+        const section = document.querySelector("section");
+        const p1 = document.createElement('p');
+        p1.textContent = "We hope you enjoyed the ride.";
+        section.append(p1);
+
+        const text = document.createTextNode(
+            " — the premier source for web development knowledge."
+        );
+        const linkPara = document.querySelector("section p");
+        linkPara.appendChild(text);
+        section.append(linkPara);
+        // linkPara.remove(); // not supported in older browsers
+        // linkPara.parentNode.removeChild(linkPara);
+        // section.removeChild(linkPara);
+
+        // p1.style.color = "white";
+        // p1.style.backgroundColor = "black";
+        // p1.style.padding = "10px";
+        // p1.style.width = "250px";
+        // p1.style.textAlign = "center";
+
+        p1.setAttribute("class", "highlight");
+        
+
+    </script>
+  </body>
+</html>
