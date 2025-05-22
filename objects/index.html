@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  <h1>Open DevTools</h1>
+
+
+  <script>
+  // Map to names
+let res;
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+res = users.map(u => u.name);
+
+/***********************************************************/
+//Map to Objects
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+res = users.map(
+    u => 
+       ({
+        fullName: `${u.name} ${u.surname}`,
+        id: u.id
+      })
+    
+    );
+
+/***********************************************************//***********************************************************/
+//Sort users by age
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+res = arr.sort(
+  (a,b) => a.age - b.age
+);
+
+//Get average age
+
+res = Math.round(arr.reduce(
+  (avg, curr) => avg + curr.age, 0 
+) / arr.length);
+
+//Create keyed object from array
+users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+res = users.reduce(
+  (group, user) => {
+    group[user.id] = user;
+    return group;
+  }, {}
+);
+
+
+
+console.table(res);
+</script>
+
+</body>
+</html>
