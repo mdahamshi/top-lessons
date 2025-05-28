@@ -1,0 +1,70 @@
+<div class="wide">
+    <!-- div.wide -->
+</div>
+
+<div class="class-1 class-2" id="id1">
+    <!-- div.class-1.class-2#id1 -->
+</div>
+
+<button type="button">
+    <!-- button[type="button"] -->
+</button>
+
+<div class="purple"><span class="cyan">
+    <!-- div.purple>span.cyan -->
+</span></div>
+
+<header>
+    <nav>
+        <ul>
+            <li class="red">
+                <!-- header>nav>ul>li -->
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<header>
+    <nav>
+        <ul>
+            <li class="class">
+                <!-- header>nav>ul>li.class*3 -->
+            </li>
+            <li class="class"></li>
+            <li class="class"></li>
+            <li class="class"></li>
+        </ul>
+    </nav>
+</header>
+
+<header>
+    <nav>
+        <ul>
+            <li class="class">sample text</li>
+            <li class="class">sample text</li>
+            <li class="class">sample text</li>
+        </ul>
+    </nav>
+</header>
+<!-- header>nav>ul>li.class*3{sample text}
+ 
+-->
+
+<header>
+    <nav>
+        <ul>
+            <li class="class">sample text 1</li>
+            <li class="class">sample text 2</li>
+            <li class="class">sample text 3</li>
+        </ul>
+    </nav>
+</header>
+<!-- header>nav>ul>li.class*3{sample text $} -->
+
+<!-- form:post>(.group>label+input:text)+(.group>label+input:number) -->
+ <form action="" method="post">
+    <div class="group"><label for=""></label><input type="text" name="" id=""></div>
+    <div class="group"><label for=""></label><input type="number" name="" id=""></div>
+ </form>
+
+ 
