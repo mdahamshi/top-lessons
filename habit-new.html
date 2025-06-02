@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tippy.js for tooltips -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .calendar-day {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .calendar-day:hover {
+            transform: scale(1.1);
+        }
+        .calendar-row {
+            text-align: left;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+        }
+        .close {
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        /* Mobile Navigation Styles */
+        .nav-label {
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .nav-item.active .nav-label {
+            display: inline;
+        }
+        /* Add New Button Mobile */
+        .add-new-mobile {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex flex-col min-h-screen w-full">
+        <!-- Sidebar (Desktop) / Bottom Nav (Mobile) -->
+        <div class="md:w-64 bg-gray-800 text-white p-6 md:flex md:flex-col fixed md:static bottom-0 left-0 right-0 z-50">
+            <div class="hidden md:flex items-center mb-8">
+                <div class="w-10 h-10 bg-gray-600 rounded-full mr-3"></div>
+                <div>
+                    <p class="font-semibold">Guest</p>
+                    <p class="text-sm text-gray-400">dieuhuongfb@gmail...</p>
+                </div>
+            </div>
+
+            <nav class="flex-1 md:block flex flex-row justify-around items-center">
+                <div class="md:mb-4 flex flex-row md:flex-col items-center md:items-start">
+                    <p class="text-gray-400 text-sm mb-2 hidden md:block">AREAS</p>
+                    <a href="#" class="nav-item flex items-center justify-center md:justify-start py-2 px-4 md:bg-gray-700 rounded md:mb-1">
+                        <span class="mr-0 md:mr-3">🌞</span>
+                        <span class="nav-label md:inline">Morning</span>
+                    </a>
+                    <a href="#" class="nav-item flex items-center justify-center md:justify-start py-2 px-4 hover:bg-gray-700 rounded md:mb-1">
+                        <span class="mr-0 md:mr-3">📋</span>
+                        <span class="nav-label md:inline">All Habits</span>
+                    </a>
+                    <a href="#" class="nav-item flex items-center justify-center md:justify-start py-2 px-4 hover:bg-gray-700 rounded md:mb-1">
+                        <span class="mr-0 md:mr-3">🧘</span>
+                        <span class="nav-label md:inline">Self-care</span>
+                    </a>
+                    <button id="addNewBtn" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded mt-auto">
+                        + Add New...
+                    </button>
+                    <button id="addNewMobileBtn" class="md:hidden add-new-mobile bg-blue-600 hover:bg-blue-700 text-white">
+                        +
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6 overflow-auto md:ml-64 pb-20 md:pb-6 w-full">
+            <div class="bg-white rounded-lg shadow p-6 mb-6 w-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="text-xl font-semibold">Read 20 pages</h1>
+                    <select class="border rounded p-1">
+                        <option>February 2020</option>
+                    </select>
+                </div>
+
+                <!-- Calendar -->
+                <div class="mb-6">
+                    <div class="grid grid-cols-7 gap-2 text-center text-sm text-gray-500 mb-2">
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THU</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                        <div>SUN</div>
+                    </div>
+
+                    <div class="calendar-row">
+                        <div class="inline-block calendar-day bg-gray-200" data-day="1">01</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="2">02</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="3">03</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="4">04</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="5">05</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="6">06</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="7">07</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="8">08</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="9">09</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="10">10</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="11">11</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="12">12</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="13">13</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="14">14</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="15">15</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="16">16</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="17">17</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="18">18</div>
+                        <div class="inline-block calendar-day bg-green-500 text-white" data-day="19">19</div>
+                        <div class="inline-block calendar-day bg-red-500 text-white" data-day="20">20</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="21">21</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="22">22</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="23">23</div>
+                        <div class="inline-block calendar-day bg-yellow-500 text-white" data-day="24">24</div>
+                        <div class="inline-block calendar-day bg-gray-200" data-day="25">25</div>
+                        <div class="inline-block calendar-day bg-gray-200" data-day="26">26</div>
+                        <div class="inline-block calendar-day bg-gray-200" data-day="27">27</div>
+                        <div class="inline-block calendar-day bg-gray-200" data-day="28">28</div>
+                        <div class="inline-block calendar-day bg-gray-200" data-day="29">29</div>
+                    </div>
+                </div>
+
+                <!-- Habits Chart -->
+                <div class="mb-6">
+                    <h2 class="text-lg font-semibold mb-4">Habits Completed Per Day</h2>
+                    <canvas id="habitsChart" class="w-full max-h-64"></canvas>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-semibold mb-4">Daily Performance</h2>
+                    <div class="flex justify-between">
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">THIS WEEK</p>
+                            <p class="text-2xl font-bold text-blue-600">71.4%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">AVERAGE</p>
+                            <p class="text-2xl font-bold text-blue-600">39.3%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h2 class="text-lg font-semibold mb-4">Streak</h2>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Jan 06 - Jan 09</span>
+                            <span class="font-semibold">4</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Jan 31 - Feb 16</span>
+                            <span class="font-semibold">15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Feb 18 - Feb 19</span>
+                            <span class="font-semibold">2</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Feb 21 - Feb 28</span>
+                            <span class="font-semibold">8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="habitModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle" class="text-lg font-semibold mb-4"></h2>
+            <ul id="modalHabitList" class="space-y-2"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Sample habit data for each day
+        const habitData = {
+            1: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            2: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            3: ['Read 20 pages - Completed', 'Morning Yoga - Completed', 'Meditation - Completed'],
+            4: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            5: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            6: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            7: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            8: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            9: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            10: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            11: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            12: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            13: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            14: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            15: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            16: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            17: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            18: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            19: ['Read 20 pages - Completed', 'Morning Yoga - Completed'],
+            20: ['Read 20 pages - Skipped', 'Morning Yoga - Skipped'],
+            21: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            22: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            23: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            24: ['Read 20 pages - Completed', 'Morning Yoga - Skipped'],
+            25: [],
+            26: [],
+            27: [],
+            28: [],
+            29: []
+        };
+
+        // Calculate completed habits per day for chart
+        const habitCounts = Object.keys(habitData).map(day => ({
+            day: parseInt(day),
+            count: habitData[day].filter(habit => habit.includes('Completed')).length
+        }));
+
+        // Initialize Chart.js
+        const ctx = document.getElementById('habitsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: Array.from({length: 29}, (_, i) => (i + 1).toString().padStart(2, '0')),
+                datasets: [{
+                    label: 'Habits Completed',
+                    data: habitCounts.map(item => item.count),
+                    borderColor: '#3B82F6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#3B82F6',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#3B82F6'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Habits'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Day of February 2020'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Add event listener for the "Add New" buttons
+        document.getElementById('addNewBtn').addEventListener('click', () => {
+            alert('Add New Habit functionality would go here!\n\nWould typically open a modal to input habit details.');
+        });
+        document.getElementById('addNewMobileBtn').addEventListener('click', () => {
+            alert('Add New Habit functionality would go here!\n\nWould typically open a modal to input habit details.');
+        });
+
+        // Mobile navigation toggle
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (window.innerWidth < 768) {
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('habitModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalHabitList = document.getElementById('modalHabitList');
+        const closeBtn = document.getElementsByClassName('close')[0];
+
+        // Add tooltips and click events for calendar days
+        const calendarDays = document.querySelectorAll('.calendar-day');
+        calendarDays.forEach(day => {
+            const dayNum = day.getAttribute('data-day');
+            const habits = habitData[dayNum] || ['No habits for this day'];
+
+            // Add tooltip using Tippy.js
+            tippy(day, {
+                content: `
+                    <div class="p-2">
+                        <h3 class="font-semibold mb-2">February ${dayNum}, 2020</h3>
+                        <ul class="list-disc list-inside">
+                            ${habits.map(habit => `<li>${habit}</li>`).join('')}
+                        </ul>
+                    </div>
+                `,
+                allowHTML: true,
+                theme: 'light',
+                placement: 'right'
+            });
+
+            // Add click event for modal
+            day.addEventListener('click', () => {
+                modalTitle.textContent = `Habits for February ${dayNum}, 2020`;
+                modalHabitList.innerHTML = habits.map(habit => `
+                    <li class="flex items-center">
+                        <span class="w-2 h-2 rounded-full mr-2 ${
+                            habit.includes('Completed') ? 'bg-green-500' : 'bg-red-500'
+                        }"></span>
+                        ${habit}
+                    </li>
+                `).join('');
+                modal.style.display = 'block';
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

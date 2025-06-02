@@ -1,0 +1,15 @@
+
+body {
+    font-size: calc(16px + 1vw);
+    line-height: calc(1.1em + 0.5vw);
+}
+
+h1 {
+    font-size: calc(1.2em + 3vw);
+}
+
+@media (min-width: 50em) {
+    h1{
+        font-size: 50px;
+    }
+}
