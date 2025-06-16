@@ -1,5 +1,6 @@
 npm install --save-dev webpack webpack-cli
 
-
-
 npx webpack
+
+npm install --save-dev html-webpack-plugin
+
