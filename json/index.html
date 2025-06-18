@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JSON: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const section = document.querySelector('section');
+
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+    let motherInfo = 'The mother cats are called ';
+    let kittenInfo;
+    const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
+
+    fetch(requestURL)
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
+    function formatNames(names){
+        let edgeCases = ['', names[0] + '.', names.join(' and ') + '.'];
+
+        if(names.length < 3)
+            return edgeCases[names.length];
+        const last = names.pop();
+        return names.join(', ') + ' and ' + last + '.';
+    }
+    function displayCatInfo(catString) {
+      let total = 0;
+      let male = 0;
+
+      // Add your code here
+        let cats = JSON.parse(catString);
+        let motherNames = cats.map(
+            cat => cat.name
+        );
+        motherInfo = formatNames(motherNames);
+
+        let kittens = cats.reduce(
+            (res, cat) => res.concat(cat.kittens), []
+        );
+        let all = kittens.length;
+        let males = kittens.filter(
+            kitten => kitten.gender === 'm'
+        ).length;
+
+        kittenInfo = `All: ${all}, Males: ${males}, Females: ${all - males}`;
+        console.table(kittens)
+
+
+
+      // Don't edit the code below here!
+
+      para1.textContent = motherInfo;
+      para2.textContent = kittenInfo;
+    }
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
