@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    input:invalid {
+      border-color: red;
+    }
+
+    input:valid {
+      border-color: green;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+      display: none;
+    }
+
+    .error.active {
+      display: block;
+    }
+
+    .success {
+      color: green;
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Register</h2>
+  <form id="signup-form" novalidate>
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" required>
+      <span class="error" id="email-error">Please enter a valid email.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country *</label>
+      <input type="text" id="country" required>
+      <span class="error" id="country-error">Please enter your country.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="postal">Postal Code *</label>
+      <input type="text" id="postal" pattern="\d{5}" required>
+      <span class="error" id="postal-error">Please enter a 5-digit postal code.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password *</label>
+      <input type="password" id="password" minlength="6" required>
+      <span class="error" id="password-error">Password must be at least 6 characters.</span>
+    </div>
+
+    <div class="form-group">
+      <label for="confirm">Confirm Password *</label>
+      <input type="password" id="confirm" required>
+      <span class="error" id="confirm-error">Passwords do not match.</span>
+    </div>
+
+    <button type="submit">Register</button>
+    <div class="success" id="success-message"></div>
+  </form>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const email = document.getElementById("email");
+    const country = document.getElementById("country");
+    const postal = document.getElementById("postal");
+    const password = document.getElementById("password");
+    const confirm = document.getElementById("confirm");
+    const successMessage = document.getElementById("success-message");
+
+    function showError(input, message) {
+      const error = document.getElementById(`${input.id}-error`);
+      error.textContent = message;
+      error.classList.add("active");
+    }
+
+    function hideError(input) {
+      const error = document.getElementById(`${input.id}-error`);
+      error.classList.remove("active");
+    }
+
+    function validateField(input) {
+      if (!input.validity.valid) {
+        showError(input, input.getAttribute("data-error") || input.validationMessage);
+        return false;
+      }
+      hideError(input);
+      return true;
+    }
+
+    function validatePasswordMatch() {
+      if (confirm.value !== password.value || confirm.value === "") {
+        showError(confirm, "Passwords do not match.");
+        return false;
+      }
+      hideError(confirm);
+      return true;
+    }
+
+    [email, country, postal, password, confirm].forEach(input => {
+      input.addEventListener("input", () => {
+        validateField(input);
+        if (input === confirm) validatePasswordMatch();
+      });
+
+      input.addEventListener("blur", () => {
+        validateField(input);
+        if (input === confirm) validatePasswordMatch();
+      });
+    });
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      let valid = true;
+
+      [email, country, postal, password].forEach(input => {
+        if (!validateField(input)) valid = false;
+      });
+
+      if (!validatePasswordMatch()) valid = false;
+
+      if (valid) {
+        successMessage.textContent = "🖐 High five! You did it.";
+        form.reset();
+        setTimeout(() => successMessage.textContent = "", 5000);
+      } else {
+        successMessage.textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>
