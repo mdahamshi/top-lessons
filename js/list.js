@@ -1,4 +1,4 @@
-class LinkedList {
+export class LinkedList {
   #head = null;
   #tail = null;
   #size = 0;
@@ -69,21 +69,27 @@ class LinkedList {
     while (index--) current = current.nextNode;
     return current;
   }
+  update(index, value) {
+    if (index < 0 || index >= this.#size) return null;
+    let current = this.#head;
+    while (index--) current = current.nextNode;
+    current.value = value;
+  }
 
-  contains(value) {
+  contains(value, equal = (value, toTest) => toTest === value) {
     let current = this.#head;
     while (current) {
-      if (current.value === value) return true;
+      if (equal(value, current.value)) return true;
       current = current.nextNode;
     }
     return false;
   }
 
-  find(value) {
+  find(value, equal = (value, toTest) => toTest === value) {
     let current = this.#head;
     let index = 0;
     while (current) {
-      if (current.value === value) return index;
+      if (equal(value, current.value)) return [index, current];
       current = current.nextNode;
       index++;
     }
@@ -140,7 +146,7 @@ class LinkedList {
     let res = "";
     let current = this.#head;
     while (current) {
-      res += `( ${current.value} ) -> `;
+      res += `( ${JSON.stringify(current.value)} ) -> `;
       current = current.nextNode;
     }
     return res + "null";
@@ -158,7 +164,9 @@ class Node {
   get value() {
     return this.#value;
   }
-
+  set value(value) {
+    this.#value = value;
+  }
   get nextNode() {
     return this.#nextNode;
   }
@@ -169,12 +177,3 @@ class Node {
     this.#nextNode = node;
   }
 }
-let list = new LinkedList();
-
-list.append("dog");
-list.append("cat");
-list.append("parrot");
-list.append("hamster");
-list.append("snake");
-list.append("turtle");
-console.log(list.toString());
