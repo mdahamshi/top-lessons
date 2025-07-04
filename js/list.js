@@ -74,6 +74,7 @@ export class LinkedList {
     let current = this.#head;
     while (index--) current = current.nextNode;
     current.value = value;
+    return current;
   }
 
   contains(value, equal = (value, toTest) => toTest === value) {
