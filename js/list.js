@@ -164,6 +164,8 @@ class Node {
   }
 
   set nextNode(node) {
+    if (!(node instanceof Node) && node !== null)
+      throw new TypeError("Must assign a Node or null");
     this.#nextNode = node;
   }
 }
