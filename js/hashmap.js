@@ -1,5 +1,5 @@
 import { LinkedList } from "./list.js";
-class HashMap {
+export class HashMap {
   #loadFactor = 0.75;
   #capacity = 16;
   #buckets = Array.from({ length: this.#capacity }, () => new LinkedList());
@@ -37,7 +37,7 @@ class HashMap {
       this.set(entry[0], entry[1]);
     });
   }
-  set(key, value) {
+  set(key, value = true) {
     let list = this.getBucket(key);
     let newItem = { key: key, value: value };
     let ind = list.find(key, this.findFunc);
@@ -113,19 +113,3 @@ class HashMap {
   }
 }
 
-let test = new HashMap();
-test.set("apple", "red");
-test.set("banana", "yellow");
-test.set("carrot", "orange");
-test.set("dog", "brown");
-test.set("elephant", "gray");
-test.set("frog", "green");
-test.set("grape", "purple");
-test.set("hat", "black");
-test.set("ice cream", "white");
-test.set("jacket", "blue");
-test.set("kite", "pink");
-test.set("lion", "golden");
-test.set("moon", "silver");
-
-console.log(test.toString());
