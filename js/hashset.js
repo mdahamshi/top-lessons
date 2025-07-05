@@ -1,6 +1,6 @@
 import { HashMap } from "./hashmap.js";
 
-class HashSet extends HashMap {
+export class HashSet extends HashMap {
   constructor() {
     super();
   }
@@ -27,10 +27,3 @@ class HashSet extends HashMap {
 
 const set = new HashSet();
 
-set.add("apple");
-set.add("banana");
-set.set("cherry"); // same as add
-set.set("banana"); // ignored because it's already there
-set.remove("banana");
-
-console.log(set.toString()); // true
