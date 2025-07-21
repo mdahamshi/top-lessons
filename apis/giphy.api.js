@@ -1,0 +1,1 @@
+export const giphApi = "KZrSqJ7vOECth5jnobWRMNfZSLTRDvka";
