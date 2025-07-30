@@ -1,0 +1,446 @@
+
+> order-service@0.0.8 test
+> PRETTY_PRINT=true jest --forceExit --verbose=true --runInBand
+
+[1m[2mDetermining test suites to run...[22m[22mtime="2025-07-28T18:55:11+03:00" level=warning msg="/home/mohammad/proj/top/repos/top-lessons/node/practica/default-app-name/services/order-service/test/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ database Pulling 
+ bff3e048017e Pulling fs layer 
+ e3e180bf7c2b Pulling fs layer 
+ 62eff3cc0cff Pulling fs layer 
+ 3d90a128d4ff Pulling fs layer 
+ ba4ce0c5ab29 Pulling fs layer 
+ a8f4b87076a9 Pulling fs layer 
+ 4b437d281a7e Pulling fs layer 
+ f1841d9dcb17 Pulling fs layer 
+ bf897300657d Pulling fs layer 
+ 3bfdfb831df4 Pulling fs layer 
+ c44ac1fcc543 Pulling fs layer 
+ 9ad3441d354a Pulling fs layer 
+ 2d79312566dd Pulling fs layer 
+ f1841d9dcb17 Waiting 
+ ba4ce0c5ab29 Waiting 
+ 9ad3441d354a Waiting 
+ a8f4b87076a9 Waiting 
+ 4b437d281a7e Waiting 
+ bf897300657d Waiting 
+ c44ac1fcc543 Waiting 
+ 3d90a128d4ff Waiting 
+ 2d79312566dd Waiting 
+ 3bfdfb831df4 Waiting 
+ 62eff3cc0cff Downloading [============================>                      ]  1.049kB/1.809kB
+ 62eff3cc0cff Downloading [==================================================>]  1.809kB/1.809kB
+ 62eff3cc0cff Verifying Checksum 
+ 62eff3cc0cff Download complete 
+ 3d90a128d4ff Downloading [>                                                  ]  14.74kB/1.38MB
+ e3e180bf7c2b Downloading [>                                                  ]  45.09kB/4.504MB
+ 3d90a128d4ff Verifying Checksum 
+ 3d90a128d4ff Download complete 
+ e3e180bf7c2b Downloading [=>                                                 ]  135.3kB/4.504MB
+ e3e180bf7c2b Downloading [===>                                               ]  352.3kB/4.504MB
+ bff3e048017e Downloading [>                                                  ]  229.4kB/22.57MB
+ e3e180bf7c2b Downloading [======>                                            ]  606.2kB/4.504MB
+ bff3e048017e Downloading [=>                                                 ]  458.8kB/22.57MB
+ e3e180bf7c2b Downloading [============>                                      ]  1.098MB/4.504MB
+ e3e180bf7c2b Downloading [===================>                               ]   1.72MB/4.504MB
+ bff3e048017e Downloading [=>                                                 ]  688.1kB/22.57MB
+ e3e180bf7c2b Downloading [================================>                  ]  2.933MB/4.504MB
+ bff3e048017e Downloading [===>                                               ]  1.376MB/22.57MB
+ e3e180bf7c2b Verifying Checksum 
+ e3e180bf7c2b Download complete 
+ bff3e048017e Downloading [=====>                                             ]  2.294MB/22.57MB
+ ba4ce0c5ab29 Downloading [>                                                  ]  63.13kB/6.186MB
+ bff3e048017e Downloading [========>                                          ]  3.903MB/22.57MB
+ ba4ce0c5ab29 Downloading [=====================>                             ]  2.621MB/6.186MB
+ bff3e048017e Downloading [==============>                                    ]  6.468MB/22.57MB
+ ba4ce0c5ab29 Downloading [=============================================>     ]  5.636MB/6.186MB
+ bff3e048017e Downloading [=======================>                           ]  10.42MB/22.57MB
+ ba4ce0c5ab29 Verifying Checksum 
+ ba4ce0c5ab29 Download complete 
+ bff3e048017e Downloading [=====================================>             ]  16.74MB/22.57MB
+ bff3e048017e Verifying Checksum 
+ bff3e048017e Download complete 
+ bff3e048017e Extracting [>                                                  ]  229.4kB/22.57MB
+ bff3e048017e Extracting [==============>                                    ]  6.423MB/22.57MB
+ bff3e048017e Extracting [=============================>                     ]  13.53MB/22.57MB
+ bff3e048017e Extracting [==========================================>        ]  19.27MB/22.57MB
+ bff3e048017e Extracting [==============================================>    ]   21.1MB/22.57MB
+ 4b437d281a7e Downloading [==================================================>]     149B/149B
+ 4b437d281a7e Verifying Checksum 
+ 4b437d281a7e Download complete 
+ bff3e048017e Extracting [================================================>  ]  21.79MB/22.57MB
+ bff3e048017e Extracting [==================================================>]  22.57MB/22.57MB
+ bff3e048017e Pull complete 
+ e3e180bf7c2b Extracting [>                                                  ]  65.54kB/4.504MB
+ e3e180bf7c2b Extracting [==================================================>]  4.504MB/4.504MB
+ e3e180bf7c2b Extracting [==================================================>]  4.504MB/4.504MB
+ f1841d9dcb17 Downloading [=========>                                         ]  1.049kB/5.584kB
+ f1841d9dcb17 Download complete 
+ e3e180bf7c2b Pull complete 
+ 62eff3cc0cff Extracting [==================================================>]  1.809kB/1.809kB
+ 62eff3cc0cff Extracting [==================================================>]  1.809kB/1.809kB
+ 62eff3cc0cff Pull complete 
+ 3d90a128d4ff Extracting [=>                                                 ]  32.77kB/1.38MB
+ a8f4b87076a9 Downloading [>                                                  ]  13.67kB/1.25MB
+ 3d90a128d4ff Extracting [==================================================>]   1.38MB/1.38MB
+ 3d90a128d4ff Pull complete 
+ ba4ce0c5ab29 Extracting [>                                                  ]  65.54kB/6.186MB
+ a8f4b87076a9 Downloading [=====>                                             ]  139.5kB/1.25MB
+ ba4ce0c5ab29 Extracting [=================================>                 ]  4.129MB/6.186MB
+ ba4ce0c5ab29 Extracting [==================================================>]  6.186MB/6.186MB
+ ba4ce0c5ab29 Pull complete 
+ a8f4b87076a9 Downloading [=============>                                     ]  344.1kB/1.25MB
+ a8f4b87076a9 Downloading [==========================>                        ]  671.7kB/1.25MB
+ bf897300657d Downloading [>                                                  ]  540.7kB/71.54MB
+ a8f4b87076a9 Downloading [=========================================>         ]  1.028MB/1.25MB
+ a8f4b87076a9 Download complete 
+ a8f4b87076a9 Extracting [=>                                                 ]  32.77kB/1.25MB
+ bf897300657d Downloading [=======>                                           ]  10.69MB/71.54MB
+ a8f4b87076a9 Extracting [==================================================>]   1.25MB/1.25MB
+ a8f4b87076a9 Pull complete 
+ 4b437d281a7e Extracting [==================================================>]     149B/149B
+ 4b437d281a7e Extracting [==================================================>]     149B/149B
+ 4b437d281a7e Pull complete 
+ f1841d9dcb17 Extracting [==================================================>]  5.584kB/5.584kB
+ f1841d9dcb17 Extracting [==================================================>]  5.584kB/5.584kB
+ f1841d9dcb17 Pull complete 
+ bf897300657d Downloading [===============>                                   ]  21.94MB/71.54MB
+ bf897300657d Downloading [=====================>                             ]  31.01MB/71.54MB
+ 3bfdfb831df4 Downloading [========>                                          ]  1.369kB/8.324kB
+ 3bfdfb831df4 Download complete 
+ bf897300657d Downloading [=============================>                     ]  42.78MB/71.54MB
+ bf897300657d Downloading [=====================================>             ]  53.45MB/71.54MB
+ bf897300657d Downloading [===========================================>       ]  62.52MB/71.54MB
+ bf897300657d Verifying Checksum 
+ bf897300657d Download complete 
+ bf897300657d Extracting [>                                                  ]  557.1kB/71.54MB
+ bf897300657d Extracting [=====>                                             ]  7.242MB/71.54MB
+ c44ac1fcc543 Downloading [==================================================>]     130B/130B
+ c44ac1fcc543 Verifying Checksum 
+ c44ac1fcc543 Download complete 
+ bf897300657d Extracting [=========>                                         ]  13.93MB/71.54MB
+ 9ad3441d354a Downloading [==================================================>]     201B/201B
+ 9ad3441d354a Verifying Checksum 
+ bf897300657d Extracting [==============>                                    ]  20.61MB/71.54MB
+ bf897300657d Extracting [======================>                            ]  32.31MB/71.54MB
+ bf897300657d Extracting [==========================>                        ]  37.88MB/71.54MB
+ bf897300657d Extracting [==============================>                    ]  44.01MB/71.54MB
+ bf897300657d Extracting [====================================>              ]  52.36MB/71.54MB
+ bf897300657d Extracting [========================================>          ]  57.93MB/71.54MB
+ bf897300657d Extracting [===========================================>       ]  62.39MB/71.54MB
+ bf897300657d Extracting [==============================================>    ]  66.85MB/71.54MB
+ 2d79312566dd Downloading [===========>                                       ]  1.049kB/4.709kB
+ 2d79312566dd Downloading [==================================================>]  4.709kB/4.709kB
+ 2d79312566dd Download complete 
+ bf897300657d Extracting [================================================>  ]  69.07MB/71.54MB
+ bf897300657d Extracting [=================================================> ]  70.19MB/71.54MB
+ bf897300657d Extracting [==================================================>]  71.54MB/71.54MB
+ bf897300657d Pull complete 
+ 3bfdfb831df4 Extracting [==================================================>]  8.324kB/8.324kB
+ 3bfdfb831df4 Extracting [==================================================>]  8.324kB/8.324kB
+ 3bfdfb831df4 Pull complete 
+ c44ac1fcc543 Extracting [==================================================>]     130B/130B
+ c44ac1fcc543 Extracting [==================================================>]     130B/130B
+ c44ac1fcc543 Pull complete 
+ 9ad3441d354a Extracting [==================================================>]     201B/201B
+ 9ad3441d354a Extracting [==================================================>]     201B/201B
+ 9ad3441d354a Pull complete 
+ 2d79312566dd Extracting [==================================================>]  4.709kB/4.709kB
+ 2d79312566dd Extracting [==================================================>]  4.709kB/4.709kB
+ 2d79312566dd Pull complete 
+ database Pulled 
+ Network test_default  Creating
+ Network test_default  Created
+ Container postgres-for-testing  Creating
+ Container postgres-for-testing  Created
+ Container postgres-for-testing  Starting
+ Container postgres-for-testing  Started
+global-setup: 12.113s
+[999D[K
+[K[1A[999D[K
+[K[1A[999D[K
+[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718126785,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Starting the web server now"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718126912,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Server listening at http://0.0.0.0:3000"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718126930,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":52866},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718126937,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"88fd4bc3-2cfc-416b-952b-223eeece511a","msg":"Order API was called to add new Order {\n  userId: 1,\n  productId: 2,\n  countryId: 1,\n  deliveryAddress: '123 Main St, New York, NY 10001',\n  paymentTermsInDays: 30\n}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127012,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"88fd4bc3-2cfc-416b-952b-223eeece511a","msg":"Sequelize operation was just executed in 1 ms with sql: Executed (default): INSERT INTO \"Order\" (\"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING \"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\"; \"123 Main St, New York, NY 10001\", 1, 1, 30, 2, \"2025-07-28 15:55:26.990 +00:00\", \"2025-07-28 15:55:26.990 +00:00\""}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127014,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","res":{"statusCode":200},"responseTime":83.20141300559044,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127018,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":52866},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127019,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"23bd232c-f780-4802-a186-775846ac206e","msg":"Order API was called to add new Order {\n  userId: 1,\n  productId: 2,\n  countryId: 1,\n  deliveryAddress: '123 Main St, New York, NY 10001',\n  paymentTermsInDays: 30\n}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127024,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"23bd232c-f780-4802-a186-775846ac206e","msg":"Sequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO \"Order\" (\"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING \"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\"; \"123 Main St, New York, NY 10001\", 1, 1, 30, 2, \"2025-07-28 15:55:27.023 +00:00\", \"2025-07-28 15:55:27.023 +00:00\""}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127025,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","res":{"statusCode":200},"responseTime":6.226533979177475,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127025,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","req":{"method":"GET","url":"/order/2","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":52866},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127026,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"14ecc5e5-ded9-465e-82ff-ffc8f46e14b6","orderId":2,"msg":"Order API was called to get order by id"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127026,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"14ecc5e5-ded9-465e-82ff-ffc8f46e14b6","msg":"Getting order by id 2"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127033,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"14ecc5e5-ded9-465e-82ff-ffc8f46e14b6","msg":"Sequelize operation was just executed in 1 ms with sql: Executed (default): SELECT \"Order\".\"id\", \"Order\".\"deliveryAddress\", \"Order\".\"userId\", \"Order\".\"countryId\", \"Order\".\"paymentTermsInDays\", \"Order\".\"productId\", \"Order\".\"createdAt\", \"Order\".\"updatedAt\", \"Country\".\"id\" AS \"Country.id\", \"Country\".\"name\" AS \"Country.name\" FROM \"Order\" AS \"Order\" LEFT OUTER JOIN \"Country\" AS \"Country\" ON \"Order\".\"countryId\" = \"Country\".\"id\" WHERE \"Order\".\"id\" = 2;"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127034,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","res":{"statusCode":200},"responseTime":8.3469820022583,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127036,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-4","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":52866},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127037,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"b78a59cf-f3d9-44e0-acb5-4ae2244a69a4","msg":"Handling error1"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":50,"time":1753718127037,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"b78a59cf-f3d9-44e0-acb5-4ae2244a69a4","name":"Error","HTTPStatus":400,"isCatastrophic":false,"statusCode":400,"code":"FST_ERR_VALIDATION","validation":[{"instancePath":"","schemaPath":"#/required","keyword":"required","params":{"missingProperty":"productId"},"message":"must have required property 'productId'"}],"validationContext":"body","msg":"body must have required property 'productId'"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127038,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"b78a59cf-f3d9-44e0-acb5-4ae2244a69a4","msg":"Firing metric error with labels {\"errorName\":\"Error\"}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127038,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-4","res":{"statusCode":400},"responseTime":2.23574498295784,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127040,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-5","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":52866},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127041,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"732e7c1f-e169-480c-a9f1-c44f313998c4","msg":"Order API was called to add new Order {\n  userId: 7,\n  productId: 1,\n  countryId: 1,\n  deliveryAddress: '123 Main St, New York, NY 10001',\n  paymentTermsInDays: 30\n}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127043,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"732e7c1f-e169-480c-a9f1-c44f313998c4","msg":"Handling error1"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":50,"time":1753718127043,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"732e7c1f-e169-480c-a9f1-c44f313998c4","name":"user-doesnt-exist","HTTPStatus":404,"isCatastrophic":false,"msg":"The user 7 doesnt exist"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127044,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"732e7c1f-e169-480c-a9f1-c44f313998c4","msg":"Firing metric error with labels {\"errorName\":\"user-doesnt-exist\"}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127044,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-5","res":{"statusCode":404},"responseTime":3.2858740091323853,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m ([0m[1m[41m3.214 s[49m[22m[0m)
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A  /api
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A    POST /orders
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen adding a new valid order, Then should get back approval with 200 response (102 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen adding a new valid order, Then should be able to retrieve it (17 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen adding an order without specifying product, stop and return 400 (3 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen the user does not exist, return 404 response (5 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [35m✎[39m [2mtodo When a new order failed, an invalid-order error was handled[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [35m✎[39m [2mtodo When a new valid order was added, then order-added metric was fired[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A      [35m✎[39m [2mtodo When the user service is down, then order is still added successfully[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1madd-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127579,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Starting the web server now"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127646,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Server listening at http://0.0.0.0:3000"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127649,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":42878},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127650,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"c08ac85f-7672-44fa-884d-041792f4f567","msg":"Order API was called to add new Order {\n  userId: 1,\n  productId: 2,\n  countryId: 1,\n  deliveryAddress: '123 Main St, New York, NY 10001',\n  paymentTermsInDays: 30\n}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127694,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"c08ac85f-7672-44fa-884d-041792f4f567","msg":"Sequelize operation was just executed in 1 ms with sql: Executed (default): INSERT INTO \"Order\" (\"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING \"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\"; \"123 Main St, New York, NY 10001\", 1, 1, 30, 2, \"2025-07-28 15:55:27.678 +00:00\", \"2025-07-28 15:55:27.678 +00:00\""}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127694,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","res":{"statusCode":200},"responseTime":45.464711010456085,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127696,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","req":{"method":"GET","url":"/order/3","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":42878},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127696,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"010f3152-d607-4f53-8c49-4ddfd05ff4c7","orderId":3,"msg":"Order API was called to get order by id"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127696,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"010f3152-d607-4f53-8c49-4ddfd05ff4c7","msg":"Getting order by id 3"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127699,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"010f3152-d607-4f53-8c49-4ddfd05ff4c7","msg":"Sequelize operation was just executed in 0 ms with sql: Executed (default): SELECT \"Order\".\"id\", \"Order\".\"deliveryAddress\", \"Order\".\"userId\", \"Order\".\"countryId\", \"Order\".\"paymentTermsInDays\", \"Order\".\"productId\", \"Order\".\"createdAt\", \"Order\".\"updatedAt\", \"Country\".\"id\" AS \"Country.id\", \"Country\".\"name\" AS \"Country.name\" FROM \"Order\" AS \"Order\" LEFT OUTER JOIN \"Country\" AS \"Country\" ON \"Order\".\"countryId\" = \"Country\".\"id\" WHERE \"Order\".\"id\" = 3;"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718127700,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","res":{"statusCode":200},"responseTime":4.260660022497177,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m ([0m[1m[41m0.629 s[49m[22m[0m)
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A  /api
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A    GET /order
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen asked for an existing order, Then should retrieve it and receive 200 response (55 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A      [33m○[39m [2mskipped When asked for an non-existing order, Then should receive 404 response[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mget-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128214,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Starting the web server now"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128277,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Server listening at http://0.0.0.0:3000"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128280,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","req":{"method":"POST","url":"/order","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":42888},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128280,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"95500745-58bc-454a-ba0b-3a9ee8cdc0fe","msg":"Order API was called to add new Order {\n  userId: 1,\n  productId: 2,\n  countryId: 1,\n  deliveryAddress: '123 Main St, New York, NY 10001',\n  paymentTermsInDays: 30\n}"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128322,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"95500745-58bc-454a-ba0b-3a9ee8cdc0fe","msg":"Sequelize operation was just executed in 0 ms with sql: Executed (default): INSERT INTO \"Order\" (\"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\") VALUES (DEFAULT,$1,$2,$3,$4,$5,$6,$7) RETURNING \"id\",\"deliveryAddress\",\"userId\",\"countryId\",\"paymentTermsInDays\",\"productId\",\"createdAt\",\"updatedAt\"; \"123 Main St, New York, NY 10001\", 1, 1, 30, 2, \"2025-07-28 15:55:28.307 +00:00\", \"2025-07-28 15:55:28.307 +00:00\""}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128323,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","res":{"statusCode":200},"responseTime":43.50481802225113,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128324,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","req":{"method":"DELETE","url":"/order/4","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":42888},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128325,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"da02ca6f-9669-422f-9197-f5e5074a478d","orderId":4,"msg":"Order API was called to delete order"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128327,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"da02ca6f-9669-422f-9197-f5e5074a478d","msg":"Sequelize operation was just executed in 0 ms with sql: Executed (default): DELETE FROM \"Order\" WHERE \"id\" = 4"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128327,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","res":{"statusCode":204},"responseTime":2.7570219933986664,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128328,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","req":{"method":"GET","url":"/order/4","hostname":"127.0.0.1:3000","remoteAddress":"127.0.0.1","remotePort":42888},"msg":"incoming request"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128328,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"20127508-0675-4904-a1ec-46f0e72cc81b","orderId":4,"msg":"Order API was called to get order by id"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128328,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"20127508-0675-4904-a1ec-46f0e72cc81b","msg":"Getting order by id 4"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128331,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","requestId":"20127508-0675-4904-a1ec-46f0e72cc81b","msg":"Sequelize operation was just executed in 0 ms with sql: Executed (default): SELECT \"Order\".\"id\", \"Order\".\"deliveryAddress\", \"Order\".\"userId\", \"Order\".\"countryId\", \"Order\".\"paymentTermsInDays\", \"Order\".\"productId\", \"Order\".\"createdAt\", \"Order\".\"updatedAt\", \"Country\".\"id\" AS \"Country.id\", \"Country\".\"name\" AS \"Country.name\" FROM \"Order\" AS \"Order\" LEFT OUTER JOIN \"Country\" AS \"Country\" ON \"Order\".\"countryId\" = \"Country\".\"id\" WHERE \"Order\".\"id\" = 4;"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A{"level":30,"time":1753718128332,"pid":2171925,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","res":{"statusCode":404},"responseTime":3.9014900028705597,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m ([0m[1m[41m0.632 s[49m[22m[0m)
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A  /api
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A    DELETE /order
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A      [32m✓[39m [2mWhen deleting an existing order, Then it should NOT be retrievable (55 ms)[22m
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mtest/[22m[1mdelete-order.test.ts[22m
+[K[1A[K[1A[999D[K----------------------------------|---------|----------|---------|---------|-------------------
+File                              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------------------------------|---------|----------|---------|---------|-------------------
+[32;1mAll files                        [0m | [32;1m  94.22[0m | [32;1m   85.36[0m | [32;1m  87.09[0m | [32;1m  94.22[0m | [31;1m                 [0m 
+[32;1m order-service                   [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  config.ts                      [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m order-service/data-access       [0m | [32;1m  95.34[0m | [32;1m     100[0m | [33;1m     75[0m | [32;1m  95.34[0m | [31;1m                 [0m 
+[32;1m  order-repository.ts            [0m | [32;1m  95.34[0m | [32;1m     100[0m | [33;1m     75[0m | [32;1m  95.34[0m | [31;1m42-43            [0m 
+[32;1m order-service/data-access/models[0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  country-model.ts               [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  db-connection.ts               [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  order-model.ts                 [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m order-service/domain            [0m | [32;1m  90.62[0m | [33;1m   78.57[0m | [32;1m    100[0m | [32;1m  90.62[0m | [31;1m                 [0m 
+[32;1m  new-order-use-case.ts          [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  order-schema.ts                [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[33;1m  order-validators.ts            [0m | [33;1m  66.66[0m | [33;1m      50[0m | [32;1m    100[0m | [33;1m  66.66[0m | [31;1m16-22,25-26      [0m 
+[32;1m  payment-terms-service.ts       [0m | [32;1m    100[0m | [33;1m      50[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m4                [0m 
+[32;1m  user-service-client.ts         [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m order-service/entry-points/api  [0m | [32;1m  96.19[0m | [32;1m   82.35[0m | [32;1m    100[0m | [32;1m  96.19[0m | [31;1m                 [0m 
+[32;1m  open-api-options.ts            [0m | [32;1m    100[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m    100[0m | [33;1m                 [0m 
+[32;1m  request-context.ts             [0m | [32;1m  94.44[0m | [32;1m     100[0m | [32;1m    100[0m | [32;1m  94.44[0m | [31;1m10               [0m 
+[32;1m  routes.ts                      [0m | [32;1m     97[0m | [32;1m   83.33[0m | [32;1m    100[0m | [32;1m     97[0m | [31;1m51-53            [0m 
+[32;1m  server.ts                      [0m | [32;1m   94.8[0m | [32;1m      80[0m | [32;1m    100[0m | [32;1m   94.8[0m | [31;1m58-61            [0m 
+[33;1m order-service/test              [0m | [33;1m  65.95[0m | [32;1m     100[0m | [31;1m     40[0m | [33;1m  65.95[0m | [31;1m                 [0m 
+[33;1m  test-helpers.ts                [0m | [33;1m  65.95[0m | [32;1m     100[0m | [31;1m     40[0m | [33;1m  65.95[0m | [31;1m5-14,24-26,28-30 [0m 
+----------------------------------|---------|----------|---------|---------|-------------------
+[1mTest Suites: [22m[1m[32m3 passed[39m[22m, 3 total
+[1mTests:       [22m[1m[33m1 skipped[39m[22m, [1m[35m3 todo[39m[22m, [1m[32m6 passed[39m[22m, 10 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4.605 s
+[2mRan all test suites[22m[2m.[22m
+[1mForce exiting Jest: [22mHave you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?

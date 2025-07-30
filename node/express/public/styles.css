@@ -1,0 +1,22 @@
+.sb-copyright p {
+  text-align: center;
+}
+
+.sb-copyright a {
+  color: var(--pico-color);
+  text-decoration: none;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer.sb-footer {
+  margin-top: auto;
+}
+
+main {
+  flex: 1;
+}

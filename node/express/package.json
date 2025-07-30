@@ -1,0 +1,35 @@
+{
+  "name": "express-basic",
+  "version": "1.0.0",
+  "description": "A simple Node.js and Express.js server setup for learning or bootstrapping a backend project.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "format": "npx prettier --write .",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdahamshi/express-basic.git"
+  },
+  "author": "Mohammad Dahamshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdahamshi/express-basic/issues"
+  },
+  "homepage": "https://github.com/mdahamshi/express-basic#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "3.6.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-validator": "^7.2.1",
+    "prettier-plugin-ejs": "^1.0.3"
+  }
+}

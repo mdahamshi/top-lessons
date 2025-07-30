@@ -1,0 +1,136 @@
+
+> @practica/common-fastify-plugins@0.0.1 test
+> jest --forceExit
+
+[1m[2mDetermining test suites to run...[22m[22m[999D[K
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        0 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1Ats-jest[versions] (WARN) Version 5.2.2 of typescript installed has not been tested with ts-jest. If you're experiencing issues, consider using a supported version (>=4.3.0 <5.0.0-0). Please do not report issues in ts-jest if you are using unsupported versions.
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1Ats-jest[versions] (WARN) Version 5.2.2 of typescript installed has not been tested with ts-jest. If you're experiencing issues, consider using a supported version (>=4.3.0 <5.0.0-0). Please do not report issues in ts-jest if you are using unsupported versions.
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        1 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        2 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        3 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1Ats-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/mohammad/proj/top/repos/top-lessons/node/practica/default-app-name/libraries/global-context/.dist/index.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        3 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1Ats-jest[ts-jest-transformer] (WARN) Got a `.js` file to compile while `allowJs` option is not set to `true` (file: /home/mohammad/proj/top/repos/top-lessons/node/practica/default-app-name/libraries/global-context/.dist/src/context.js). To fix this:
+  - if you want TypeScript to process JS files, set `allowJs` to `true` in your TypeScript config (usually tsconfig.json)
+  - if you do not want TypeScript to process your `.js` files, in your Jest config change the `transform` key which value is `ts-jest` so that it does not match `.js` files anymore
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        3 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A{"level":30,"time":1753718114139,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Server listening at http://127.0.0.1:3000"}
+{"level":30,"time":1753718114155,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","req":{"method":"GET","url":"/","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":46326},"msg":"incoming request"}
+{"level":30,"time":1753718114157,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","res":{"statusCode":401},"responseTime":1.827221006155014,"msg":"request completed"}
+{"level":30,"time":1753718114165,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","req":{"method":"GET","url":"/","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":46326},"msg":"incoming request"}
+{"level":30,"time":1753718114166,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-2","res":{"statusCode":401},"responseTime":0.9021289944648743,"msg":"request completed"}
+{"level":30,"time":1753718114167,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","req":{"method":"GET","url":"/","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":46326},"msg":"incoming request"}
+{"level":30,"time":1753718114168,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-3","res":{"statusCode":200},"responseTime":1.0979600250720978,"msg":"request completed"}
+{"level":30,"time":1753718114170,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-4","req":{"method":"GET","url":"/","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":46326},"msg":"incoming request"}
+{"level":30,"time":1753718114170,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-4","res":{"statusCode":200},"responseTime":0.1600329875946045,"msg":"request completed"}
+{"level":30,"time":1753718114171,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-5","req":{"method":"GET","url":"/","hostname":"localhost:3000","remoteAddress":"127.0.0.1","remotePort":46326},"msg":"incoming request"}
+{"level":30,"time":1753718114171,"pid":2172047,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-5","res":{"statusCode":401},"responseTime":0.10051000118255615,"msg":"request completed"}
+{"level":30,"time":1753718114176,"pid":2172049,"hostname":"mohammad-B450-AORUS-ELITE","msg":"Server listening at http://127.0.0.1:3001"}
+{"level":30,"time":1753718114194,"pid":2172049,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","req":{"method":"GET","url":"/example-route","hostname":"localhost:3001","remoteAddress":"127.0.0.1","remotePort":38100},"msg":"incoming request"}
+{"level":30,"time":1753718114198,"pid":2172049,"hostname":"mohammad-B450-AORUS-ELITE","reqId":"req-1","res":{"statusCode":200},"responseTime":3.0962560176849365,"msg":"request completed"}
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m0 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m[1m[32m6 passed[39m[22m, 6 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m ]8;;file:///home/mohammad/proj/top/repos/top-lessons/node/practica/default-app-name/libraries/common-fastify-plugins/lib/jwt-verifier/test/jwt-verifier.test.ts[2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m]8;;
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m[1m[32m6 passed[39m[22m, 6 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[0m[7m[1m[32m PASS [39m[22m[27m[0m ]8;;file:///home/mohammad/proj/top/repos/top-lessons/node/practica/default-app-name/libraries/common-fastify-plugins/lib/request-context/test/request-context.test.ts[2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m]8;;
+
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/jwt-verifier/test/[22m[1mjwt-verifier.test.ts[22m
+[0m[7m[33m[1m RUNS [22m[39m[27m[0m [2mlib/request-context/test/[22m[1mrequest-context.test.ts[22m
+
+[1mTest Suites: [22m0 of 2 total
+[1mTests:       [22m[1m[32m6 passed[39m[22m, 6 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4 s[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[K[1A[999D[K
+[1mTest Suites: [22m[1m[32m2 passed[39m[22m, 2 total
+[1mTests:       [22m[1m[32m6 passed[39m[22m, 6 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        4.914 s
+[2mRan all test suites[22m[2m.[22m
+[1mForce exiting Jest: [22mHave you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?

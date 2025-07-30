@@ -1,0 +1,16 @@
+{
+  "name": "crash-course",
+  "version": "1.0.0",
+  "description": "Crash course code",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --env-file=.env server2.js"
+  },
+  "author": "Mohammad Dahamshi",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
