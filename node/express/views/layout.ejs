@@ -15,11 +15,13 @@
   </head>
   <body>
     <header>
-      <div class="container"><%- include('navbar', { links: links }) %></div>
+      <div class="container">
+        <%- include('partials/navbar', { links: links }) %>
+      </div>
     </header>
 
     <main class="container"><%- body %></main>
-    <%- include('footer') %>
+    <%- include('partials/footer') %>
     <script src="/script.js"></script>
   </body>
 </html>

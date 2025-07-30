@@ -1,2 +1,2 @@
-export * from './userStorage.js';
+export * from './usersStorage.js';
 export * from './messageStorage.js';

@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export function initExpressApp(app) {
   // Locals
-  app.locals.appName = 'SaraWebs Express';
+  app.locals.appName = 'Top Express';
   // nav links
   app.locals.links = [{ href: '/', text: 'Home' }];
 
